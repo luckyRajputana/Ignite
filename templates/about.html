@@ -1,0 +1,61 @@
+{%extends "base.html"%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {%block title%}
+        <title>Welcome</title>
+    {%endblock%}
+</head>
+
+<body>
+    {%block content%}
+        <style type="text/css">
+            .leftside,.rightside{
+                height: 50vh;
+                width: 100%;
+            }
+            .leftside{
+                background: white
+            }
+            .rightside{
+                background: white
+            }
+
+            @media screen and (min-width: 768px)
+            {
+                .leftside,.rightside{
+                    height: 100vh
+                }
+            }
+        </style>
+
+        <div class="row no-gutters">
+                <div class="col-md-6 no-gutters">
+                    <div class="leftside">
+                        <h5>Please share your valuable feedback and we will tell your sentiment</h5>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <p><font color="red">{{polarity}}</font></p>
+                            <p>This is just a trailor stay tuned for image processing,computer vision implementation</p>
+                         </form>
+                    </div>
+                </div>
+
+                <div class="col-md-6 no-gutters">
+                    <div class="rightside">
+                        
+                    </div>
+                </div>
+        </div>
+
+    {%endblock content%}
+</body>
+
+</html>

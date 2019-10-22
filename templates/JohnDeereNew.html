@@ -1,0 +1,338 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+  	<title>JohnDeere</title>
+  	<link rel="stylesheet" href="{% static 'css/123.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+  </head>
+  <body>
+    
+
+
+    <div class="container" id = "_appendHere">
+      <div class="heading">
+                <nav class="navbar navbar-expand-sm navbar-dark">
+                        <!-- Brand/logo -->
+                        <a class="navbar-brand" href="https://ignite-iot.herokuapp.com/ignite2/">JOHN DEERE BIN TRACKING SYSTEM</a>
+                        
+                        <!-- Links -->
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://ignite-iot.herokuapp.com/admin/restaurant/assembly/">DATABASE</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://ignite-iot.herokuapp.com/apiapi/">API</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://ignite-iot.herokuapp.com/admin/">ADMIN</a>
+                          </li>
+                          <li class="nav-item">
+                                <a class="nav-link" href="https://ignite-iot.herokuapp.com/login/">LOGIN</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="https://ignite-iot.herokuapp.com/ignite/">IGNITE1</a>
+                        </li>
+                        </ul>
+                      </nav>
+                
+            </div>
+      <!--------------------------------->
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <img src="{%static 'images/tractor.png'%}">
+            <h3>SCREW ASSEMBLY AREA</h1>
+            
+          </div>
+          
+        </div>
+        <div class="face face2">
+          <div class="content">
+                <div style="display: flex;">
+            <table>
+              <caption>---------------------------</caption>
+              <caption>Bin No: {{bins}}</caption>
+                <tr>
+                    <th>Bin</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>
+                    {% if LatestDate == date1 %}
+                    <div class="Green"> 
+                        {{b1}}
+                        </div>
+                    {% else %} 
+                        {{b1}}
+                    
+                    {% endif %} 
+                    </td>
+                    <td>
+                      {% if LatestDate == date1 %}
+                      <div class="Green"> 
+                          {{d1}}
+                          </div>
+                      {% else %} 
+                          {{d1}}
+                      
+                      {% endif %} 
+                      </td>
+                      <td>
+                        {% if LatestDate == date1 %}
+                        <div class="Green"> 
+                            {{t1}}
+                            </div>
+                        {% else %} 
+                            {{t1}}
+                        
+                        {% endif %} 
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                        {% if LatestDate == date2 %}
+                        <div class="Green"> 
+                            {{b2}}
+                        </div>
+                        {% else %} 
+                            {{b2}}
+                        {% endif %} 
+                    </td>
+                    <td>
+                      {% if LatestDate == date2 %}
+                      <div class="Green"> 
+                          {{d2}}
+                          </div>
+                      {% else %} 
+                          {{d2}}
+                      
+                      {% endif %} 
+                      </td>
+                      <td>
+                        {% if LatestDate == date2 %}
+                        <div class="Green"> 
+                            {{t2}}
+                            </div>
+                        {% else %} 
+                            {{t2}}
+                        
+                        {% endif %} 
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                        {% if LatestDate == date3 %}
+                            <div class="Green"> 
+                                {{b3}}
+                            </div>
+                        {% else %} 
+                            {{b3}}
+                                       
+                        {% endif %} 
+                            
+                    </td>
+                    <td>
+                      {% if LatestDate == date3 %}
+                      <div class="Green"> 
+                          {{d3}}
+                          </div>
+                      {% else %} 
+                          {{d3}}
+                      
+                      {% endif %} 
+                      </td>
+                      <td>
+                        {% if LatestDate == date3 %}
+                        <div class="Green"> 
+                            {{t3}}
+                            </div>
+                        {% else %} 
+                            {{t3}}
+                        
+                        {% endif %} 
+                        </td>
+                </tr>
+                <tr>
+                  <td>
+                    {% if LatestDate == date4 %}
+                    <div class="Green"> 
+                        {{b4}}
+                        </div>
+                    {% else %} 
+                        {{b4}}
+                    
+                    {% endif %} 
+                    </td>
+                    <td>
+                      {% if LatestDate == date4 %}
+                      <div class="Green"> 
+                          {{d4}}
+                          </div>
+                      {% else %} 
+                          {{d4}}
+                      
+                      {% endif %} 
+                      </td>
+                      <td>
+                        {% if LatestDate == date4 %}
+                        <div class="Green"> 
+                            {{t4}}
+                            </div>
+                        {% else %} 
+                            {{t4}}
+                        
+                        {% endif %} 
+                        </td>
+                </tr>
+              </table>
+              
+              <img src="data:image/png;base64,{{ image_base64 }} ">
+
+          </div>
+        </div> 
+        </div>
+        <div class="face face3">
+          <img style = " padding-bottom:190px ; width: 100%;
+          height: 200%;" src="{%static 'images/jd2.jpg'%}">  
+        </div>
+        
+      </div>
+  <!--------------------------------->
+      <div class="card">
+            <div class="face face1">
+              <div class="content">
+                    <img src="{%static 'images/trucking.png'%}">
+                <h3>HOPER ASSEMBLY AREA</h1>
+                
+              </div>
+              
+            </div>
+            <div class="face face2">
+              <div class="content">
+              
+               <table>
+                  <caption>---------------------------</caption>
+                  <caption>Bin No: --</caption>
+                    <tr>
+                            <th>Bin</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                
+    
+              </div>
+              
+            </div>
+            <div class="face face3">
+                
+                    <img style = " padding-bottom:190px ; width: 100%;
+                    height: 200%;" src="{%static 'images/jd2.jpg'%}"> 
+                
+            
+            
+               
+            </div>
+            
+          </div>
+    
+
+
+      <!--------------------------------->
+
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+                <img src="{%static 'images/robot.png'%}">
+            <h3>PRE-FABRICATION AREA </h1>
+            
+          </div>
+          
+        </div>
+        <div class="face face2">
+          <div class="content">
+            
+            <table>
+              <caption>---------------------------</caption>
+              <caption>Bin No: --</caption>
+                <tr>
+                        <th>Bin</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                </tr>
+                <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                </tr>
+              <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+              </table>
+            
+
+          </div>
+          
+        </div>
+        <div class="face face3">
+          
+         
+          <img style = " padding-bottom:190px ; width: 100%;
+          height: 200%;" src="{%static 'images/jd2.jpg'%}"> 
+          
+        </div>
+        
+      </div>
+
+
+    </div>
+
+
+ 
+ </div>
+
+
+
+
+
+  	
+  </body>

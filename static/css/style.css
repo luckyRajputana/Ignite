@@ -1,0 +1,16 @@
+.navbar {
+    text-align: center;
+}
+.foot {
+    display: flex;
+    justify-content: center;
+  }
+
+.heading {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40;
+    text-align: right;
+    background-color: rgb(60, 60, 146);
+    color: white;
+} 
+
