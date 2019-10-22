@@ -1,0 +1,98 @@
+When we import a module, the interpreter first looks in the current directory. Then, it looks into PYTHONPATH, an environment variable with a list of directories. Finally, it looks into the installation-dependent default directory.
+
+
+Base python commands
+python --version
+which python 
+where python
+pip --version
+pip install virtualenv  "for creating virtaul environment in Base python in my case it is in C:\Users\chauh\Python3_6_6"
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+virtual environment
+
+To change to new virtaul environemnt we have to deactivate the previous virtaul environemtn
+
+virtualenv -p python .  "for creating environment in current directory so that you can do your work in dev mode and dont affect the base python then 4 files will be generated"
+
+cd scripts and run activate command
+for deactivate run deactivate command
+
+In Juptor notebook how to use virtual env kernel
+1)first activate your virtualenv and then run pip install ipykernel
+2) ipython kernel install --user --name=projectname
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+pip install django==1.11.2
+python -m django --version
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+django-admin.py startproject WebService1 ."five files will be generated intit,setting,urls,wsgi,manage.py"
+python manage.py startapp restaurant
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+python manage.py runserver
+python manage.py createsuperuser
+pip freeze > requirement.txt
+python manage.py migrate
+
+
+
+# for migration to sqlLite------------------------------------------------------------------------------------------------------------------------------
+python manage.py makemigrations   --> it will create init.1000.py file in migration folder , which will be responsible for table migration
+python manage.py migrate
+
+we can create database table object in shell and command is
+python manage.py shell --> https://simpleisbetterthancomplex.com/series/2017/09/11/a-complete-beginners-guide-to-django-part-2.html#figure-4
+Every Django model comes with a special attribute; we call it a Model Manager. You can access it via the Python attribute objects. It is used mainly to execute queries in the database. For example, we could use it to directly create a new Board object:
+board = Board.objects.create(name='Python', description='General discussion about Python.')
+Board.objects.all()
+
+python manage.py createsuperuser
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+html visual studio--> https://thisdavej.com/build-an-amazing-html-editor-using-visual-studio-code/
+type html it will show html default structure
+Shift+Alt+F-->format html
+
+
+note-i was studying about class beased views and before that i need to know how classes works in python so go thrigh harshit 
+
+
+
+
+Working With Class Based Views In Django
+#-----------------------------------------------------------------------------------------------------------------------------
+We have to set debug = false if we dwant to see error 404 in production for that we need to add the allowedhost_names also for sake i kept it as '*'
+--> for testing command is python manage.py test
+--> we should always give url pattern a name eg: url('^$', home , name = 'home')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.codementor.io/jamesezechukwu/working-with-class-based-views-in-django-5zkjnrvwc
+
+RedirectVIew --- https://godjango.com/15-class-based-views-part-1-templateview-and-redirectview/

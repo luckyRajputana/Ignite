@@ -1,0 +1,47 @@
+- Copy the project seperately
+- Go to 'Getting Started on Heroku with Python'
+- Create an Heroku account
+- install pipenv
+- Install git ( check git --version)
+- Install Heroku CLI
+- Login heroku
+- Create a virtual enviroment
+- Run manage.py not gonna run - pip freeze nothing installing
+- Check which version django,requests you have and install it
+- Run manage.py and then stop it
+- Go to django heroku
+- Create a Procfile and 
+- Install django-heroku
+- Add stuff to settings.py file
+- Install guincorn 
+- pip freeze - requirements.txt (use the angle bracket after pip freeze. Youtube doesn't allow angle bracket in description :/ )
+- heroku create attreyaweb (to create an app on heroku)
+	1)Go to directory and activate the VirtualEnvironment by .\Scripts\activate
+	2)Heroku login
+	3)Heroku create <appname> this will create a app at heroku server with this name
+	4)Check whether git is installed on your system or not by using git --version
+	5) adding git to the current directory by using git init
+	6) git status to see not added files to the git
+	7) git add --all
+	8) git commit -m "your comment"
+	9) heroku git:remote -a <lucky-alpha-python(app name)>
+	10) git push heroku master
+- git status git commands - (git push heroku master
+- Open up the website)
+- Admin panel not working. heroku run bash. Migrations
+
+Extra commands for connecting heroku database
+1) heroku addons  -- tells which database addon is linked to your service
+2) heroku run bash -- we can see app that we have push to heroku server
+3) heroku addons:create heroku-postgresql:hobby-dev  --To add Postgre to yourdb
+4) 	import dj_database_url                          ---Add these lines under database in setting
+
+	db_from_env = dj_database_url.config()
+	DATABASES['default'].update(db_from_env)
+	
+5)heroku run python manage.py makemigrations
+6)heroku run python manage.py migrate && heroku run python manage.py createsuperuser  
+
+https://lucky-python-app.herokuapp.com/login/
+https://lucky-python-app.herokuapp.com/oauth/complete/facebook
+
